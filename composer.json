@@ -1,0 +1,19 @@
+{
+    "name": "ahnafalam/expense-tracker",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ahnafalam"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "*",
+        "vlucas/phpdotenv": "^5.3",
+        "doctrine/orm": "^2.11",
+        "symfony/cache": "^6.0"
+    }
+}
