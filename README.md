@@ -1,42 +1,44 @@
-About Project
+PHP Expense Tracker
 
-Its a simple php expense tracker project with responsive UI. Here User can add expense, generate report of monthly expenses.
-
+A simple PHP-based expense tracker with a responsive user interface.
+Users can add expenses and generate monthly expense reports.
+ 
 
 Local Environment Setup
 
-We have to download php and xampp to run the project.
+Prerequisites
+1. PHP
+2. XAMPP
 
-1. Download PHP 
-2. Download XAMPP
-3. Set the environment variable of php (e.g: C:\xampp\php)
+Setup Steps
 
-Composer setup
+1. Install PHP and XAMPP
+    a. Download and install both PHP and XAMPP.
+    b. Set the PHP environment variable (e.g., C:\xampp\php).
 
-1. download the file: 
-2. install it.
-3. Run composer b
+2. Install Composer
+    a. Download and install Composer from https://getcomposer.org/download/.
+    b. Verify installation by running: composer -v
 
+3. Set up the project
+    a. Clone or download the project repository.
+    b. Move the project root folder into C:\xampp\htdocs.
 
-After completing the local environment setup, we can download the project. Move the project root folder into the C:\xampp\htdocs
-
-
-Tun the project into your machine you have to do 
-1. create a .env file into the root directory
-2. copy the content of the .evn.example and paste in the .evn file
-3. provide necessary DB configuration.
-
-
-Debuging Project
-
-1. Download the xdebug3 dll file
-2. rename this as php_xdebug.dll
-3. move this file into C:\xampp\php\ext
-3. add the line into C:\xampp\php\php.ini file 
-    zend_extension = xdebug
-4. Install the vsCode php Debug extension.
-
-PHP Unit
-1. run composer require --dev phpunit/phpunit
+5. Configure environment variables
+    a.Create a .env file in the project root directory.
+    b. Copy the content from .env.example and update the database configurations accordingly.
 
 
+Debugging Setup (Xdebug 3)
+1. Download the appropriate Xdebug 3 DLL file for your PHP version from https://xdebug.org/download.
+2. Rename the downloaded file to php_xdebug.dll
+3. Move the file into C:\xampp\php\ext
+4. Edit your php.ini file (C:\xampp\php\php.ini) and add: zend_extension = php_xdebug.dll
+5. Install the PHP Debug extension for VSCode.
+6. Restart XAMPP services.
+
+Running Unit Tests with PHPUnit
+
+1. Install PHPUnit via Composer: composer require --dev phpunit/phpunit
+2. Run tests: ./vendor/bin/phpunit
+3. Coverage Report: vendor/bin/phpunit --coverage-html coverage-report/
