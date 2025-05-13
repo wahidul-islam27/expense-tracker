@@ -25,7 +25,13 @@ class ExpenseRepository extends BaseRepository implements ExpenseRepositoryInter
 
     public function get($id)
     {
-        throw new MethodNotSupportedException('Implementation not supported');
+        return $this->db
+            ->createQueryBuilder()
+            ->select('expense_id', 'user_id', 'category_id', 'description', 'amount', 'expense_date')
+            ->from('expense')
+            ->where('expense_id = ?')
+            ->setParameter(0, $id)
+            ->fetchAssociative();
     }
 
     public function getAll()
@@ -59,14 +65,15 @@ class ExpenseRepository extends BaseRepository implements ExpenseRepositoryInter
             ->executeStatement();
     }
 
-    public function getExpenseByCategoryId($categoryId)
+    public function getExpenseByCategoryId($categoryId, $userId)
     {
         return $this->db
             ->createQueryBuilder()
             ->select('expense_id', 'user_id', 'description', 'amount', 'expense_date')
             ->from('expense')
-            ->where('category_id = :category_id')
+            ->where('category_id = :category_id and user_id = :user_id')
             ->setParameter('category_id', $categoryId)
+            ->setParameter('user_id', $userId)
             ->fetchAllAssociative();
     }
 
@@ -77,6 +84,46 @@ class ExpenseRepository extends BaseRepository implements ExpenseRepositoryInter
             ->select('expense_id', 'category_id', 'description', 'amount', 'expense_date')
             ->from('expense')
             ->where('user_id = :user_id')
+            ->setParameter('user_id', $userId)
+            ->fetchAllAssociative();
+    }
+
+    public function getExpenseByFilter($userId, $category, $month)
+    {
+        $query = $this->db
+            ->createQueryBuilder()
+            ->select('expense_id', 'category_id', 'description', 'amount', 'expense_date')
+            ->from('expense')
+            ->where('user_id = :user_id')
+            ->setParameter('user_id', $userId);
+        if ($month) {
+            $query
+                ->andWhere("DATE_FORMAT(expense_date, '%Y-%m') = :month")
+                ->setParameter('month', $month);
+        }
+
+        if ($category) {
+            $query
+                ->andWhere('category_id = :category_id')
+                ->setParameter('category_id', $category);
+        }
+
+        $query->orderBy('expense_date', 'DESC');
+        return $query->fetchAllAssociative();
+    }
+
+    public function getReportByMonth($month, $userId)
+    {
+        return $this->db
+            ->createQueryBuilder()
+            ->select('c.category_id, c.category_name AS category', 'SUM(e.amount) as total')
+            ->from('expense', 'e')
+            ->leftJoin('e', 'category', 'c', 'c.category_id = e.category_id')
+            ->where('DATE_FORMAT(e.expense_date, :monthFormat) = :month')
+            ->andWhere('e.user_id = :user_id')
+            ->groupBy('c.category_name')
+            ->setParameter('monthFormat', '%Y-%m')
+            ->setParameter('month', $month)
             ->setParameter('user_id', $userId)
             ->fetchAllAssociative();
     }

@@ -10,10 +10,11 @@ use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\Table;
+use JsonSerializable;
 
 #[Entity]
 #[Table(name: 'expense')]
-class Expense
+class Expense implements JsonSerializable
 {
     #[Id]
     #[Column(name: 'category_id', GeneratedValue: 'AUTO')]
@@ -34,43 +35,74 @@ class Expense
     #[Column(name: 'expense_date')]
     private \DateTime $expenseDate;
 
-    public function getId(): int {
+    public function getId(): int
+    {
         return $this->id;
     }
 
-    public function setDescription(string $description): void {
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    public function setDescription(string $description): void
+    {
         $this->description = $description;
     }
 
-    public function getDescription(): string {
+    public function getDescription(): string
+    {
         return $this->description;
     }
 
-    public function setUser(User $user): void {
+    public function setUser(User $user): void
+    {
         $this->user  = $user;
     }
 
-    public function getUser(): User {
+    public function getUser(): User
+    {
         return $this->user;
     }
 
-    public function setCategory(Category $category): void {
+    public function setCategory(Category $category): void
+    {
         $this->category = $category;
     }
 
-    public function setAmount(string $amount): void {
+    public function getCategory(): Category {
+        return $this->category;
+    }
+
+    public function setAmount(string $amount): void
+    {
         $this->amount = $amount;
     }
 
-    public function getAmount(): string {
+    public function getAmount(): string
+    {
         return $this->amount;
     }
 
-    public function setExpenseDate(\DateTime $date): void {
+    public function setExpenseDate(\DateTime $date): void
+    {
         $this->expenseDate = $date;
     }
 
-    public function getExpenseDate(): \DateTime {
+    public function getExpenseDate(): \DateTime
+    {
         return $this->expenseDate;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'id' => $this->id,
+            'description' => $this->description,
+            'user' => $this->user->getId(),
+            'category' => $this->category->getCategoryName(),
+            'amount' => $this->amount,
+            'expense_date' => $this->expenseDate
+        ];
     }
 }

@@ -12,10 +12,11 @@ use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
+use JsonSerializable;
 
 #[Entity]
 #[Table('user')]
-class User
+class User implements JsonSerializable
 {
     #[Id]
     #[Column]
@@ -30,6 +31,12 @@ class User
 
     #[Column(name: 'income_add_time')]
     private \DateTime $incomeAddTime;
+
+    #[Column(name: 'password')]
+    private string $password;
+
+    #[Column(name: 'role')]
+    private string $role;
 
     #[OneToMany(targetEntity: Expense::class, mappedBy: 'user', cascade: ['persist', 'remove'])]
     private Collection $expenseItems;
@@ -77,5 +84,31 @@ class User
     public function getIncomeAddTime(): \DateTime
     {
         return $this->incomeAddTime;
+    }
+
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
+    }
+
+    public function setRole(string $role): void
+    {
+        $this->role = $role;
+    }
+
+    public function getRole(): string
+    {
+        return $this->role;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'id' => $this->id,
+            'username' => $this->username,
+            'monthly_income' => $this->monthlyIncome,
+            'income_add_time' => $this->incomeAddTime,
+            'role' => $this->role
+        ];
     }
 }

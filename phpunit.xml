@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+>
+
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <report>
+            <html outputDirectory="coverage-report"/>
+            <text showUncoveredFiles="true"/>
+        </report>
+    </coverage>
+</phpunit>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" 
+        bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory>src</directory>
+        </include>
+        <report>
+            <html outputDirectory="coverage-report"/>
+            <text showUncoveredFiles="true"/>
+        </report>
+    </coverage>
+</phpunit> -->

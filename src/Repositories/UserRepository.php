@@ -11,43 +11,60 @@ use DateTime;
 
 class UserRepository extends BaseRepository implements UserRepositoryInterface
 {
-    private $user;
-
     public function create($userData)
     {
         $this->db->insert('user', [
             'user_name' => $userData['user_name'],
             'monthly_income' => $userData['monthly_income'],
-            'income_add_time' => (new DateTime())->format('Y-m-d H:i:s')
+            'password' => $userData['password'],
+            'income_add_time' => (new DateTime())->format('Y-m-d H:i:s'),
+            'role' => $userData['role']
         ]);
+    }
+
+    public function getByUsernameAndPassword($username, $password)
+    {
+        return $this->db
+            ->createQueryBuilder()
+            ->select('id', 'user_name', 'monthly_income', 'role')
+            ->from('user')
+            ->where('user_name = :user_name')
+            ->andWhere('password = :password')
+            ->setParameter('user_name', $username)
+            ->setParameter('password', $password)
+            ->fetchAssociative();
     }
 
     public function get($id)
     {
-        $this->user = $this->db
+        return $this->db
             ->createQueryBuilder()
-            ->select('id', 'user_name', 'monthly_income', 'income_add_time')
+            ->select('id', 'user_name', 'monthly_income', 'income_add_time', 'role')
             ->from('user')
             ->where('id = ?')
             ->setParameter(0, $id)
             ->fetchAssociative();
+    }
 
-        echo '<pre>';
-        var_dump($this->user);
-        echo '</pre>';
+    public function updatePassword($username, $password)
+    {
+        $this->db
+            ->createQueryBuilder()
+            ->update('user')
+            ->set('password', ':password')
+            ->where('user_name = :user_name')
+            ->setParameter('password', $password)
+            ->setParameter('user_name', $username)
+            ->executeStatement();
     }
 
     public function getAll()
     {
-        $users = $this->db
+        return $this->db
             ->createQueryBuilder()
-            ->select('id', 'user_name', 'monthly_income', 'income_add_time')
+            ->select('id', 'user_name', 'monthly_income', 'income_add_time', 'role')
             ->from('user')
             ->fetchAllAssociative();
-
-        echo '<pre>';
-        var_dump($users);
-        echo '</pre>';
     }
 
     public function update($id, $userData)

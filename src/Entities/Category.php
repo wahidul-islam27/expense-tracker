@@ -12,10 +12,11 @@ use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
+use JsonSerializable;
 
 #[Entity]
 #[Table(name: 'category')]
-class Category
+class Category implements JsonSerializable
 {
     #[Id]
     #[Column(name: 'category_id', GeneratedValue: 'AUTO')]
@@ -50,5 +51,13 @@ class Category
     public function getCategoryName(): string
     {
         return $this->categoryName;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            "id" => $this->id,
+            "category_name" => $this->categoryName
+        ];
     }
 }

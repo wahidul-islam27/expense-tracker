@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App;
 
@@ -8,7 +8,8 @@ namespace App;
  * @property-read ?array $db
  * @property-read ?array $mailer
  */
-class Config {
+class Config
+{
     protected array $config = [];
 
     public function __construct(array $env)
@@ -20,6 +21,9 @@ class Config {
                 'password'  => $env['DB_PASS'],
                 'dbname'    => $env['DB_DATABASE'],
                 'driver'    => $env['DB_DRIVER'] ?? 'pdo_mysql',
+            ],
+            'mailer' => [
+                'dsn' => $env['MAILER_DSN']
             ]
         ];
     }

@@ -11,12 +11,7 @@ use App\Exceptions\SystemException;
 
 class CategoryService
 {
-    private $categoryRepo;
-
-    public function __construct()
-    {
-        $this->categoryRepo = new CategoryRepository();
-    }
+    public function __construct(protected CategoryRepository $categoryRepo) {}
 
     public function createCategory($categoryData): void
     {
@@ -25,7 +20,7 @@ class CategoryService
         try {
             $this->categoryRepo->create($categoryData);
         } catch (\Exception $e) {
-            throw new SystemException("SE-500", $e->getMessage());
+            throw new SystemException(500, $e->getMessage());
         }
     }
 
@@ -36,7 +31,7 @@ class CategoryService
 
             $category = ServiceUtils::mapCategoryObjectToCategoryEntity($categoryObj);
         } catch (\Exception $e) {
-            throw new SystemException("SE-500", $e->getMessage());
+            throw new SystemException(500, $e->getMessage());
         }
 
         return $category;
@@ -50,14 +45,14 @@ class CategoryService
             $categoryObjs = $this->categoryRepo->getAll() ?? [];
 
             if (sizeof($categoryObjs) == 0) {
-                throw new BusinessException('BE-400', 'No Category found');
+                throw new BusinessException(400, 'No Category found');
             }
 
             foreach ($categoryObjs as $categoryObj) {
                 $categories[] = ServiceUtils::mapCategoryObjectToCategoryEntity($categoryObj);
             }
         } catch (\Exception $e) {
-            throw new SystemException("SE-500", $e->getMessage());
+            throw new SystemException(500, $e->getMessage());
         }
 
         return $categories;
@@ -70,13 +65,13 @@ class CategoryService
         $existingCategory = $this->categoryRepo->get($id) ?? null;
 
         if ($existingCategory == null) {
-            throw new BusinessException('BE-400', 'Category not found');
+            throw new BusinessException(400, 'Category not found');
         }
 
         try {
             $this->categoryRepo->update($id, $categoryObj);
         } catch (\Exception $e) {
-            throw new SystemException("SE-500", $e->getMessage());
+            throw new SystemException(500, $e->getMessage());
         }
     }
 
@@ -85,13 +80,13 @@ class CategoryService
         $existingCategory = $this->categoryRepo->get($id) ?? null;
 
         if ($existingCategory == null) {
-            throw new BusinessException('BE-400', 'Category not found');
+            throw new BusinessException(400, 'Category not found');
         }
 
         try {
             $this->categoryRepo->delete($id);
         } catch (\Exception $e) {
-            throw new SystemException("SE-500", $e->getMessage());
+            throw new SystemException(500, $e->getMessage());
         }
     }
 }

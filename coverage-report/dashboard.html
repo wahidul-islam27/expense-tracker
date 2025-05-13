@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\xampp\htdocs\expense-tracker\src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">C:\xampp\htdocs\expense-tracker\src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="App.php.html#17">App\App</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Config.php.html#11">App\Config</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container.php.html#10">App\Container</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#11">App\Controllers\CategoryController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Controller.php.html#11">App\Controllers\Controller</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#13">App\Controllers\HomeController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#21">App\Controllers\UserController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DB.php.html#10">App\DB</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dto/Response.php.html#7">App\Dto\Response</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/BaseRepository.php.html#10">App\Repositories\BaseRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/CategoryRepository.php.html#7">App\Repositories\CategoryRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#12">App\Repositories\ExpenseRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#12">App\Repositories\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#10">App\Router</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/JWTUtils.php.html#12">App\Security\JWTUtils</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#12">App\Services\CategoryService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/EmailService.php.html#13">App\Services\EmailService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View.php.html#9">App\View</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Category.php.html#17">App\Entities\Category</a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="Entities/Expense.php.html#15">App\Entities\Expense</a></td><td class="text-right">35%</td></tr>
+       <tr><td><a href="Entities/User.php.html#17">App\Entities\User</a></td><td class="text-right">47%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#14">App\Services\ServiceUtils</a></td><td class="text-right">58%</td></tr>
+       <tr><td><a href="Services/ExpenseService.php.html#11">App\Services\ExpenseService</a></td><td class="text-right">76%</td></tr>
+       <tr><td><a href="Services/UserService.php.html#14">App\Services\UserService</a></td><td class="text-right">83%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/HomeController.php.html#13">App\Controllers\HomeController</a></td><td class="text-right">756</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#21">App\Controllers\UserController</a></td><td class="text-right">756</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#12">App\Services\CategoryService</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#11">App\Controllers\CategoryController</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="Container.php.html#10">App\Container</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Router.php.html#10">App\Router</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#12">App\Repositories\ExpenseRepository</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#14">App\Services\ServiceUtils</a></td><td class="text-right">101</td></tr>
+       <tr><td><a href="View.php.html#9">App\View</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Services/ExpenseService.php.html#11">App\Services\ExpenseService</a></td><td class="text-right">47</td></tr>
+       <tr><td><a href="Services/UserService.php.html#14">App\Services\UserService</a></td><td class="text-right">27</td></tr>
+       <tr><td><a href="App.php.html#17">App\App</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Security/JWTUtils.php.html#12">App\Security\JWTUtils</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="App.php.html#22"><abbr title="App\App::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="App.php.html#34"><abbr title="App\App::db">db</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="App.php.html#39"><abbr title="App\App::run">run</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Config.php.html#15"><abbr title="App\Config::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Config.php.html#31"><abbr title="App\Config::__get">__get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container.php.html#15"><abbr title="App\Container::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container.php.html#26"><abbr title="App\Container::has">has</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container.php.html#31"><abbr title="App\Container::set">set</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container.php.html#36"><abbr title="App\Container::resolve">resolve</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#14"><abbr title="App\Controllers\CategoryController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#20"><abbr title="App\Controllers\CategoryController::createCategory">createCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#42"><abbr title="App\Controllers\CategoryController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#54"><abbr title="App\Controllers\CategoryController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#88"><abbr title="App\Controllers\CategoryController::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Controller.php.html#16"><abbr title="App\Controllers\Controller::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Controller.php.html#21"><abbr title="App\Controllers\Controller::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#18"><abbr title="App\Controllers\HomeController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#23"><abbr title="App\Controllers\HomeController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#59"><abbr title="App\Controllers\HomeController::addExpense">addExpense</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#81"><abbr title="App\Controllers\HomeController::editExpense">editExpense</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#109"><abbr title="App\Controllers\HomeController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#114"><abbr title="App\Controllers\HomeController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#123"><abbr title="App\Controllers\HomeController::report">report</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#143"><abbr title="App\Controllers\HomeController::download">download</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#151"><abbr title="App\Controllers\HomeController::createExpenseObject">createExpenseObject</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#162"><abbr title="App\Controllers\HomeController::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#31"><abbr title="App\Controllers\UserController::createUser">createUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#51"><abbr title="App\Controllers\UserController::login">login</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#68"><abbr title="App\Controllers\UserController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#74"><abbr title="App\Controllers\UserController::profile">profile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#109"><abbr title="App\Controllers\UserController::forget">forget</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#133"><abbr title="App\Controllers\UserController::confirm">confirm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#154"><abbr title="App\Controllers\UserController::createUserObject">createUserObject</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#164"><abbr title="App\Controllers\UserController::sendEmail">sendEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#180"><abbr title="App\Controllers\UserController::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#192"><abbr title="App\Controllers\UserController::showAlert">showAlert</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#199"><abbr title="App\Controllers\UserController::getEmailMessage">getEmailMessage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#211"><abbr title="App\Controllers\UserController::generateRandomWord">generateRandomWord</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#223"><abbr title="App\Controllers\UserController::getAuthenticatedUser">getAuthenticatedUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DB.php.html#13"><abbr title="App\DB::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DB.php.html#18"><abbr title="App\DB::__call">__call</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dto/Response.php.html#8"><abbr title="App\Dto\Response::success">success</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dto/Response.php.html#16"><abbr title="App\Dto\Response::error">error</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Category.php.html#36"><abbr title="App\Entities\Category::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Category.php.html#51"><abbr title="App\Entities\Category::getCategoryName">getCategoryName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Category.php.html#56"><abbr title="App\Entities\Category::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Expense.php.html#53"><abbr title="App\Entities\Expense::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Expense.php.html#63"><abbr title="App\Entities\Expense::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Expense.php.html#73"><abbr title="App\Entities\Expense::getCategory">getCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Expense.php.html#82"><abbr title="App\Entities\Expense::getAmount">getAmount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Expense.php.html#92"><abbr title="App\Entities\Expense::getExpenseDate">getExpenseDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/Expense.php.html#97"><abbr title="App\Entities\Expense::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/User.php.html#74"><abbr title="App\Entities\User::getMonthlyIncome">getMonthlyIncome</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/User.php.html#84"><abbr title="App\Entities\User::getIncomeAddTime">getIncomeAddTime</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/User.php.html#99"><abbr title="App\Entities\User::getRole">getRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entities/User.php.html#104"><abbr title="App\Entities\User::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/BaseRepository.php.html#14"><abbr title="App\Repositories\BaseRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/CategoryRepository.php.html#9"><abbr title="App\Repositories\CategoryRepository::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/CategoryRepository.php.html#18"><abbr title="App\Repositories\CategoryRepository::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/CategoryRepository.php.html#28"><abbr title="App\Repositories\CategoryRepository::getAll">getAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/CategoryRepository.php.html#36"><abbr title="App\Repositories\CategoryRepository::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/CategoryRepository.php.html#46"><abbr title="App\Repositories\CategoryRepository::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#15"><abbr title="App\Repositories\ExpenseRepository::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#26"><abbr title="App\Repositories\ExpenseRepository::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#37"><abbr title="App\Repositories\ExpenseRepository::getAll">getAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#42"><abbr title="App\Repositories\ExpenseRepository::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#58"><abbr title="App\Repositories\ExpenseRepository::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#68"><abbr title="App\Repositories\ExpenseRepository::getExpenseByCategoryId">getExpenseByCategoryId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#80"><abbr title="App\Repositories\ExpenseRepository::getExpenseByUserId">getExpenseByUserId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#91"><abbr title="App\Repositories\ExpenseRepository::getExpenseByFilter">getExpenseByFilter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#115"><abbr title="App\Repositories\ExpenseRepository::getReportByMonth">getReportByMonth</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#14"><abbr title="App\Repositories\UserRepository::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#25"><abbr title="App\Repositories\UserRepository::getByUsernameAndPassword">getByUsernameAndPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#38"><abbr title="App\Repositories\UserRepository::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#49"><abbr title="App\Repositories\UserRepository::updatePassword">updatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#61"><abbr title="App\Repositories\UserRepository::getAll">getAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#70"><abbr title="App\Repositories\UserRepository::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#75"><abbr title="App\Repositories\UserRepository::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repositories/UserRepository.php.html#85"><abbr title="App\Repositories\UserRepository::updateMonthlyIncome">updateMonthlyIncome</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#14"><abbr title="App\Router::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#19"><abbr title="App\Router::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#26"><abbr title="App\Router::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#31"><abbr title="App\Router::post">post</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#36"><abbr title="App\Router::put">put</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#41"><abbr title="App\Router::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#46"><abbr title="App\Router::routes">routes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Router.php.html#51"><abbr title="App\Router::resolve">resolve</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/JWTUtils.php.html#15"><abbr title="App\Security\JWTUtils::generateJwtToken">generateJwtToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/JWTUtils.php.html#33"><abbr title="App\Security\JWTUtils::validateUserLoggedIn">validateUserLoggedIn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#16"><abbr title="App\Services\CategoryService::createCategory">createCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#27"><abbr title="App\Services\CategoryService::getCategory">getCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#40"><abbr title="App\Services\CategoryService::getAll">getAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#61"><abbr title="App\Services\CategoryService::updateCategory">updateCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#78"><abbr title="App\Services\CategoryService::deleteCategory">deleteCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/EmailService.php.html#17"><abbr title="App\Services\EmailService::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/EmailService.php.html#22"><abbr title="App\Services\EmailService::send">send</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/ExpenseService.php.html#161"><abbr title="App\Services\ExpenseService::downloadReport">downloadReport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#36"><abbr title="App\Services\ServiceUtils::validateCategory">validateCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#65"><abbr title="App\Services\ServiceUtils::validateName">validateName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#160"><abbr title="App\Services\ServiceUtils::setCookieValue">setCookieValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#165"><abbr title="App\Services\ServiceUtils::mapCategoryObjectToCategoryEntity">mapCategoryObjectToCategoryEntity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/UserService.php.html#18"><abbr title="App\Services\UserService::loginUser">loginUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View.php.html#11"><abbr title="App\View::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View.php.html#16"><abbr title="App\View::make">make</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View.php.html#21"><abbr title="App\View::render">render</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View.php.html#47"><abbr title="App\View::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View.php.html#52"><abbr title="App\View::__get">__get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#80"><abbr title="App\Services\ServiceUtils::validateEmail">validateEmail</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#96"><abbr title="App\Services\ServiceUtils::validateAmount">validateAmount</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#112"><abbr title="App\Services\ServiceUtils::validateDescription">validateDescription</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#123"><abbr title="App\Services\ServiceUtils::validateDate">validateDate</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#22"><abbr title="App\Services\ServiceUtils::validateUser">validateUser</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#49"><abbr title="App\Services\ServiceUtils::validateExpense">validateExpense</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="Services/UserService.php.html#47"><abbr title="App\Services\UserService::updateMonthlyIncome">updateMonthlyIncome</abbr></a></td><td class="text-right">85%</td></tr>
+       <tr><td><a href="Services/ExpenseService.php.html#19"><abbr title="App\Services\ExpenseService::createExpense">createExpense</abbr></a></td><td class="text-right">87%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Container.php.html#36"><abbr title="App\Container::resolve">resolve</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#23"><abbr title="App\Controllers\HomeController::index">index</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#54"><abbr title="App\Controllers\CategoryController::update">update</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#123"><abbr title="App\Controllers\HomeController::report">report</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#74"><abbr title="App\Controllers\UserController::profile">profile</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Router.php.html#51"><abbr title="App\Router::resolve">resolve</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Services/ExpenseService.php.html#161"><abbr title="App\Services\ExpenseService::downloadReport">downloadReport</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#65"><abbr title="App\Services\ServiceUtils::validateName">validateName</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#81"><abbr title="App\Controllers\HomeController::editExpense">editExpense</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#162"><abbr title="App\Controllers\HomeController::init">init</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#40"><abbr title="App\Services\CategoryService::getAll">getAll</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#20"><abbr title="App\Controllers\CategoryController::createCategory">createCategory</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#88"><abbr title="App\Controllers\CategoryController::init">init</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#51"><abbr title="App\Controllers\UserController::login">login</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#109"><abbr title="App\Controllers\UserController::forget">forget</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#133"><abbr title="App\Controllers\UserController::confirm">confirm</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Repositories/ExpenseRepository.php.html#91"><abbr title="App\Repositories\ExpenseRepository::getExpenseByFilter">getExpenseByFilter</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#61"><abbr title="App\Services\CategoryService::updateCategory">updateCategory</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#78"><abbr title="App\Services\CategoryService::deleteCategory">deleteCategory</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="View.php.html#21"><abbr title="App\View::render">render</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="App.php.html#39"><abbr title="App\App::run">run</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container.php.html#15"><abbr title="App\Container::get">get</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/CategoryController.php.html#42"><abbr title="App\Controllers\CategoryController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/HomeController.php.html#59"><abbr title="App\Controllers\HomeController::addExpense">addExpense</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#31"><abbr title="App\Controllers\UserController::createUser">createUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#180"><abbr title="App\Controllers\UserController::init">init</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#211"><abbr title="App\Controllers\UserController::generateRandomWord">generateRandomWord</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Security/JWTUtils.php.html#33"><abbr title="App\Security\JWTUtils::validateUserLoggedIn">validateUserLoggedIn</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#16"><abbr title="App\Services\CategoryService::createCategory">createCategory</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/CategoryService.php.html#27"><abbr title="App\Services\CategoryService::getCategory">getCategory</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#36"><abbr title="App\Services\ServiceUtils::validateCategory">validateCategory</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#80"><abbr title="App\Services\ServiceUtils::validateEmail">validateEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#96"><abbr title="App\Services\ServiceUtils::validateAmount">validateAmount</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/UserService.php.html#18"><abbr title="App\Services\UserService::loginUser">loginUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#112"><abbr title="App\Services\ServiceUtils::validateDescription">validateDescription</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#123"><abbr title="App\Services\ServiceUtils::validateDate">validateDate</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Services/ExpenseService.php.html#19"><abbr title="App\Services\ExpenseService::createExpense">createExpense</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Services/UserService.php.html#47"><abbr title="App\Services\UserService::updateMonthlyIncome">updateMonthlyIncome</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#22"><abbr title="App\Services\ServiceUtils::validateUser">validateUser</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Services/ServiceUtils.php.html#49"><abbr title="App\Services\ServiceUtils::validateExpense">validateExpense</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.32</a> using <a href="https://secure.php.net/" target="_top">PHP 8.2.12</a> and <a href="https://phpunit.de/">PHPUnit 9.6.23</a> at Tue May 13 13:45:07 CEST 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([18,0,0,0,2,1,1,0,1,1,0,7], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([107,0,0,0,0,0,4,1,0,3,1,43], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,4,"<a href=\"App.php.html#17\">App\\App<\/a>"],[0,2,"<a href=\"Config.php.html#11\">App\\Config<\/a>"],[0,12,"<a href=\"Container.php.html#10\">App\\Container<\/a>"],[0,14,"<a href=\"Controllers\/CategoryController.php.html#11\">App\\Controllers\\CategoryController<\/a>"],[0,2,"<a href=\"Controllers\/Controller.php.html#11\">App\\Controllers\\Controller<\/a>"],[0,27,"<a href=\"Controllers\/HomeController.php.html#13\">App\\Controllers\\HomeController<\/a>"],[0,27,"<a href=\"Controllers\/UserController.php.html#21\">App\\Controllers\\UserController<\/a>"],[0,2,"<a href=\"DB.php.html#10\">App\\DB<\/a>"],[0,2,"<a href=\"Dto\/Response.php.html#7\">App\\Dto\\Response<\/a>"],[33.33333333333333,6,"<a href=\"Entities\/Category.php.html#17\">App\\Entities\\Category<\/a>"],[35,13,"<a href=\"Entities\/Expense.php.html#15\">App\\Entities\\Expense<\/a>"],[47.368421052631575,13,"<a href=\"Entities\/User.php.html#17\">App\\Entities\\User<\/a>"],[100,1,"<a href=\"Exceptions\/BusinessException.php.html#7\">App\\Exceptions\\BusinessException<\/a>"],[100,0,"<a href=\"Exceptions\/ContainerException.php.html#9\">App\\Exceptions\\Container\\ContainerException<\/a>"],[100,0,"<a href=\"Exceptions\/InvalidInputException.php.html#7\">App\\Exceptions\\InvalidInputException<\/a>"],[100,0,"<a href=\"Exceptions\/MethodNotSupportedException.php.html#7\">App\\Exceptions\\MethodNotSupportedException<\/a>"],[100,0,"<a href=\"Exceptions\/RouterNotFoundException.php.html#7\">App\\Exceptions\\RouterNotFoundException<\/a>"],[100,1,"<a href=\"Exceptions\/SystemException.php.html#7\">App\\Exceptions\\SystemException<\/a>"],[100,0,"<a href=\"Exceptions\/ViewNotFoundException.php.html#7\">App\\Exceptions\\ViewNotFoundException<\/a>"],[0,1,"<a href=\"Repositories\/BaseRepository.php.html#10\">App\\Repositories\\BaseRepository<\/a>"],[0,5,"<a href=\"Repositories\/CategoryRepository.php.html#7\">App\\Repositories\\CategoryRepository<\/a>"],[0,11,"<a href=\"Repositories\/ExpenseRepository.php.html#12\">App\\Repositories\\ExpenseRepository<\/a>"],[0,8,"<a href=\"Repositories\/UserRepository.php.html#12\">App\\Repositories\\UserRepository<\/a>"],[0,12,"<a href=\"Router.php.html#10\">App\\Router<\/a>"],[0,3,"<a href=\"Security\/JWTUtils.php.html#12\">App\\Security\\JWTUtils<\/a>"],[0,15,"<a href=\"Services\/CategoryService.php.html#12\">App\\Services\\CategoryService<\/a>"],[0,2,"<a href=\"Services\/EmailService.php.html#13\">App\\Services\\EmailService<\/a>"],[76.19047619047619,33,"<a href=\"Services\/ExpenseService.php.html#11\">App\\Services\\ExpenseService<\/a>"],[58.18181818181818,31,"<a href=\"Services\/ServiceUtils.php.html#14\">App\\Services\\ServiceUtils<\/a>"],[83.6734693877551,25,"<a href=\"Services\/UserService.php.html#14\">App\\Services\\UserService<\/a>"],[0,7,"<a href=\"View.php.html#9\">App\\View<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"App.php.html#22\">App\\App::__construct<\/a>"],[0,1,"<a href=\"App.php.html#34\">App\\App::db<\/a>"],[0,2,"<a href=\"App.php.html#39\">App\\App::run<\/a>"],[0,1,"<a href=\"Config.php.html#15\">App\\Config::__construct<\/a>"],[0,1,"<a href=\"Config.php.html#31\">App\\Config::__get<\/a>"],[0,2,"<a href=\"Container.php.html#15\">App\\Container::get<\/a>"],[0,1,"<a href=\"Container.php.html#26\">App\\Container::has<\/a>"],[0,1,"<a href=\"Container.php.html#31\">App\\Container::set<\/a>"],[0,8,"<a href=\"Container.php.html#36\">App\\Container::resolve<\/a>"],[0,1,"<a href=\"Controllers\/CategoryController.php.html#14\">App\\Controllers\\CategoryController::__construct<\/a>"],[0,3,"<a href=\"Controllers\/CategoryController.php.html#20\">App\\Controllers\\CategoryController::createCategory<\/a>"],[0,2,"<a href=\"Controllers\/CategoryController.php.html#42\">App\\Controllers\\CategoryController::delete<\/a>"],[0,5,"<a href=\"Controllers\/CategoryController.php.html#54\">App\\Controllers\\CategoryController::update<\/a>"],[0,3,"<a href=\"Controllers\/CategoryController.php.html#88\">App\\Controllers\\CategoryController::init<\/a>"],[0,1,"<a href=\"Controllers\/Controller.php.html#16\">App\\Controllers\\Controller::__construct<\/a>"],[0,1,"<a href=\"Controllers\/Controller.php.html#21\">App\\Controllers\\Controller::init<\/a>"],[0,1,"<a href=\"Controllers\/HomeController.php.html#18\">App\\Controllers\\HomeController::__construct<\/a>"],[0,7,"<a href=\"Controllers\/HomeController.php.html#23\">App\\Controllers\\HomeController::index<\/a>"],[0,2,"<a href=\"Controllers\/HomeController.php.html#59\">App\\Controllers\\HomeController::addExpense<\/a>"],[0,4,"<a href=\"Controllers\/HomeController.php.html#81\">App\\Controllers\\HomeController::editExpense<\/a>"],[0,1,"<a href=\"Controllers\/HomeController.php.html#109\">App\\Controllers\\HomeController::update<\/a>"],[0,1,"<a href=\"Controllers\/HomeController.php.html#114\">App\\Controllers\\HomeController::delete<\/a>"],[0,5,"<a href=\"Controllers\/HomeController.php.html#123\">App\\Controllers\\HomeController::report<\/a>"],[0,1,"<a href=\"Controllers\/HomeController.php.html#143\">App\\Controllers\\HomeController::download<\/a>"],[0,1,"<a href=\"Controllers\/HomeController.php.html#151\">App\\Controllers\\HomeController::createExpenseObject<\/a>"],[0,4,"<a href=\"Controllers\/HomeController.php.html#162\">App\\Controllers\\HomeController::init<\/a>"],[100,1,"<a href=\"Controllers\/UserController.php.html#29\">App\\Controllers\\UserController::__construct<\/a>"],[0,2,"<a href=\"Controllers\/UserController.php.html#31\">App\\Controllers\\UserController::createUser<\/a>"],[0,3,"<a href=\"Controllers\/UserController.php.html#51\">App\\Controllers\\UserController::login<\/a>"],[0,1,"<a href=\"Controllers\/UserController.php.html#68\">App\\Controllers\\UserController::logout<\/a>"],[0,5,"<a href=\"Controllers\/UserController.php.html#74\">App\\Controllers\\UserController::profile<\/a>"],[0,3,"<a href=\"Controllers\/UserController.php.html#109\">App\\Controllers\\UserController::forget<\/a>"],[0,3,"<a href=\"Controllers\/UserController.php.html#133\">App\\Controllers\\UserController::confirm<\/a>"],[0,1,"<a href=\"Controllers\/UserController.php.html#154\">App\\Controllers\\UserController::createUserObject<\/a>"],[0,1,"<a href=\"Controllers\/UserController.php.html#164\">App\\Controllers\\UserController::sendEmail<\/a>"],[0,2,"<a href=\"Controllers\/UserController.php.html#180\">App\\Controllers\\UserController::init<\/a>"],[0,1,"<a href=\"Controllers\/UserController.php.html#192\">App\\Controllers\\UserController::showAlert<\/a>"],[0,1,"<a href=\"Controllers\/UserController.php.html#199\">App\\Controllers\\UserController::getEmailMessage<\/a>"],[0,2,"<a href=\"Controllers\/UserController.php.html#211\">App\\Controllers\\UserController::generateRandomWord<\/a>"],[0,1,"<a href=\"Controllers\/UserController.php.html#223\">App\\Controllers\\UserController::getAuthenticatedUser<\/a>"],[0,1,"<a href=\"DB.php.html#13\">App\\DB::__construct<\/a>"],[0,1,"<a href=\"DB.php.html#18\">App\\DB::__call<\/a>"],[0,1,"<a href=\"Dto\/Response.php.html#8\">App\\Dto\\Response::success<\/a>"],[0,1,"<a href=\"Dto\/Response.php.html#16\">App\\Dto\\Response::error<\/a>"],[100,1,"<a href=\"Entities\/Category.php.html#31\">App\\Entities\\Category::__construct<\/a>"],[0,1,"<a href=\"Entities\/Category.php.html#36\">App\\Entities\\Category::getId<\/a>"],[100,1,"<a href=\"Entities\/Category.php.html#41\">App\\Entities\\Category::setId<\/a>"],[100,1,"<a href=\"Entities\/Category.php.html#46\">App\\Entities\\Category::setCategoryName<\/a>"],[0,1,"<a href=\"Entities\/Category.php.html#51\">App\\Entities\\Category::getCategoryName<\/a>"],[0,1,"<a href=\"Entities\/Category.php.html#56\">App\\Entities\\Category::jsonSerialize<\/a>"],[100,1,"<a href=\"Entities\/Expense.php.html#38\">App\\Entities\\Expense::getId<\/a>"],[100,1,"<a href=\"Entities\/Expense.php.html#43\">App\\Entities\\Expense::setId<\/a>"],[100,1,"<a href=\"Entities\/Expense.php.html#48\">App\\Entities\\Expense::setDescription<\/a>"],[0,1,"<a href=\"Entities\/Expense.php.html#53\">App\\Entities\\Expense::getDescription<\/a>"],[100,1,"<a href=\"Entities\/Expense.php.html#58\">App\\Entities\\Expense::setUser<\/a>"],[0,1,"<a href=\"Entities\/Expense.php.html#63\">App\\Entities\\Expense::getUser<\/a>"],[100,1,"<a href=\"Entities\/Expense.php.html#68\">App\\Entities\\Expense::setCategory<\/a>"],[0,1,"<a href=\"Entities\/Expense.php.html#73\">App\\Entities\\Expense::getCategory<\/a>"],[100,1,"<a href=\"Entities\/Expense.php.html#77\">App\\Entities\\Expense::setAmount<\/a>"],[0,1,"<a href=\"Entities\/Expense.php.html#82\">App\\Entities\\Expense::getAmount<\/a>"],[100,1,"<a href=\"Entities\/Expense.php.html#87\">App\\Entities\\Expense::setExpenseDate<\/a>"],[0,1,"<a href=\"Entities\/Expense.php.html#92\">App\\Entities\\Expense::getExpenseDate<\/a>"],[0,1,"<a href=\"Entities\/Expense.php.html#97\">App\\Entities\\Expense::jsonSerialize<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#44\">App\\Entities\\User::__construct<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#49\">App\\Entities\\User::getId<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#54\">App\\Entities\\User::setId<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#59\">App\\Entities\\User::setUsername<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#64\">App\\Entities\\User::getUsername<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#69\">App\\Entities\\User::setMonthlyIncome<\/a>"],[0,1,"<a href=\"Entities\/User.php.html#74\">App\\Entities\\User::getMonthlyIncome<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#79\">App\\Entities\\User::setIncomeAddDate<\/a>"],[0,1,"<a href=\"Entities\/User.php.html#84\">App\\Entities\\User::getIncomeAddTime<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#89\">App\\Entities\\User::setPassword<\/a>"],[100,1,"<a href=\"Entities\/User.php.html#94\">App\\Entities\\User::setRole<\/a>"],[0,1,"<a href=\"Entities\/User.php.html#99\">App\\Entities\\User::getRole<\/a>"],[0,1,"<a href=\"Entities\/User.php.html#104\">App\\Entities\\User::jsonSerialize<\/a>"],[100,1,"<a href=\"Exceptions\/BusinessException.php.html#8\">App\\Exceptions\\BusinessException::__construct<\/a>"],[100,1,"<a href=\"Exceptions\/SystemException.php.html#8\">App\\Exceptions\\SystemException::__construct<\/a>"],[0,1,"<a href=\"Repositories\/BaseRepository.php.html#14\">App\\Repositories\\BaseRepository::__construct<\/a>"],[0,1,"<a href=\"Repositories\/CategoryRepository.php.html#9\">App\\Repositories\\CategoryRepository::create<\/a>"],[0,1,"<a href=\"Repositories\/CategoryRepository.php.html#18\">App\\Repositories\\CategoryRepository::get<\/a>"],[0,1,"<a href=\"Repositories\/CategoryRepository.php.html#28\">App\\Repositories\\CategoryRepository::getAll<\/a>"],[0,1,"<a href=\"Repositories\/CategoryRepository.php.html#36\">App\\Repositories\\CategoryRepository::update<\/a>"],[0,1,"<a href=\"Repositories\/CategoryRepository.php.html#46\">App\\Repositories\\CategoryRepository::delete<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#15\">App\\Repositories\\ExpenseRepository::create<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#26\">App\\Repositories\\ExpenseRepository::get<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#37\">App\\Repositories\\ExpenseRepository::getAll<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#42\">App\\Repositories\\ExpenseRepository::update<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#58\">App\\Repositories\\ExpenseRepository::delete<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#68\">App\\Repositories\\ExpenseRepository::getExpenseByCategoryId<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#80\">App\\Repositories\\ExpenseRepository::getExpenseByUserId<\/a>"],[0,3,"<a href=\"Repositories\/ExpenseRepository.php.html#91\">App\\Repositories\\ExpenseRepository::getExpenseByFilter<\/a>"],[0,1,"<a href=\"Repositories\/ExpenseRepository.php.html#115\">App\\Repositories\\ExpenseRepository::getReportByMonth<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#14\">App\\Repositories\\UserRepository::create<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#25\">App\\Repositories\\UserRepository::getByUsernameAndPassword<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#38\">App\\Repositories\\UserRepository::get<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#49\">App\\Repositories\\UserRepository::updatePassword<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#61\">App\\Repositories\\UserRepository::getAll<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#70\">App\\Repositories\\UserRepository::update<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#75\">App\\Repositories\\UserRepository::delete<\/a>"],[0,1,"<a href=\"Repositories\/UserRepository.php.html#85\">App\\Repositories\\UserRepository::updateMonthlyIncome<\/a>"],[0,1,"<a href=\"Router.php.html#14\">App\\Router::__construct<\/a>"],[0,1,"<a href=\"Router.php.html#19\">App\\Router::register<\/a>"],[0,1,"<a href=\"Router.php.html#26\">App\\Router::get<\/a>"],[0,1,"<a href=\"Router.php.html#31\">App\\Router::post<\/a>"],[0,1,"<a href=\"Router.php.html#36\">App\\Router::put<\/a>"],[0,1,"<a href=\"Router.php.html#41\">App\\Router::delete<\/a>"],[0,1,"<a href=\"Router.php.html#46\">App\\Router::routes<\/a>"],[0,5,"<a href=\"Router.php.html#51\">App\\Router::resolve<\/a>"],[0,1,"<a href=\"Security\/JWTUtils.php.html#15\">App\\Security\\JWTUtils::generateJwtToken<\/a>"],[0,2,"<a href=\"Security\/JWTUtils.php.html#33\">App\\Security\\JWTUtils::validateUserLoggedIn<\/a>"],[100,1,"<a href=\"Services\/CategoryService.php.html#14\">App\\Services\\CategoryService::__construct<\/a>"],[0,2,"<a href=\"Services\/CategoryService.php.html#16\">App\\Services\\CategoryService::createCategory<\/a>"],[0,2,"<a href=\"Services\/CategoryService.php.html#27\">App\\Services\\CategoryService::getCategory<\/a>"],[0,4,"<a href=\"Services\/CategoryService.php.html#40\">App\\Services\\CategoryService::getAll<\/a>"],[0,3,"<a href=\"Services\/CategoryService.php.html#61\">App\\Services\\CategoryService::updateCategory<\/a>"],[0,3,"<a href=\"Services\/CategoryService.php.html#78\">App\\Services\\CategoryService::deleteCategory<\/a>"],[0,1,"<a href=\"Services\/EmailService.php.html#17\">App\\Services\\EmailService::__construct<\/a>"],[0,1,"<a href=\"Services\/EmailService.php.html#22\">App\\Services\\EmailService::send<\/a>"],[100,1,"<a href=\"Services\/ExpenseService.php.html#13\">App\\Services\\ExpenseService::__construct<\/a>"],[87.5,4,"<a href=\"Services\/ExpenseService.php.html#19\">App\\Services\\ExpenseService::createExpense<\/a>"],[100,2,"<a href=\"Services\/ExpenseService.php.html#37\">App\\Services\\ExpenseService::updateExpense<\/a>"],[100,2,"<a href=\"Services\/ExpenseService.php.html#48\">App\\Services\\ExpenseService::deleteExpense<\/a>"],[100,4,"<a href=\"Services\/ExpenseService.php.html#59\">App\\Services\\ExpenseService::getExpenseByUser<\/a>"],[100,4,"<a href=\"Services\/ExpenseService.php.html#84\">App\\Services\\ExpenseService::getExpenseByCategory<\/a>"],[100,2,"<a href=\"Services\/ExpenseService.php.html#109\">App\\Services\\ExpenseService::getExpenseById<\/a>"],[100,5,"<a href=\"Services\/ExpenseService.php.html#123\">App\\Services\\ExpenseService::getExpenseByFilter<\/a>"],[100,2,"<a href=\"Services\/ExpenseService.php.html#150\">App\\Services\\ExpenseService::getReport<\/a>"],[0,5,"<a href=\"Services\/ExpenseService.php.html#161\">App\\Services\\ExpenseService::downloadReport<\/a>"],[100,1,"<a href=\"Services\/ExpenseService.php.html#193\">App\\Services\\ExpenseService::getUser<\/a>"],[100,1,"<a href=\"Services\/ExpenseService.php.html#198\">App\\Services\\ExpenseService::getCategory<\/a>"],[66.66666666666666,2,"<a href=\"Services\/ServiceUtils.php.html#22\">App\\Services\\ServiceUtils::validateUser<\/a>"],[0,2,"<a href=\"Services\/ServiceUtils.php.html#36\">App\\Services\\ServiceUtils::validateCategory<\/a>"],[80,2,"<a href=\"Services\/ServiceUtils.php.html#49\">App\\Services\\ServiceUtils::validateExpense<\/a>"],[0,5,"<a href=\"Services\/ServiceUtils.php.html#65\">App\\Services\\ServiceUtils::validateName<\/a>"],[50,4,"<a href=\"Services\/ServiceUtils.php.html#80\">App\\Services\\ServiceUtils::validateEmail<\/a>"],[50,4,"<a href=\"Services\/ServiceUtils.php.html#96\">App\\Services\\ServiceUtils::validateAmount<\/a>"],[50,3,"<a href=\"Services\/ServiceUtils.php.html#112\">App\\Services\\ServiceUtils::validateDescription<\/a>"],[50,3,"<a href=\"Services\/ServiceUtils.php.html#123\">App\\Services\\ServiceUtils::validateDate<\/a>"],[100,1,"<a href=\"Services\/ServiceUtils.php.html#134\">App\\Services\\ServiceUtils::hasSpecialChar<\/a>"],[100,1,"<a href=\"Services\/ServiceUtils.php.html#140\">App\\Services\\ServiceUtils::IsValidNumber<\/a>"],[100,1,"<a href=\"Services\/ServiceUtils.php.html#147\">App\\Services\\ServiceUtils::mapUserObjectToUserEntity<\/a>"],[0,1,"<a href=\"Services\/ServiceUtils.php.html#160\">App\\Services\\ServiceUtils::setCookieValue<\/a>"],[0,1,"<a href=\"Services\/ServiceUtils.php.html#165\">App\\Services\\ServiceUtils::mapCategoryObjectToCategoryEntity<\/a>"],[100,1,"<a href=\"Services\/ServiceUtils.php.html#175\">App\\Services\\ServiceUtils::mapExpenseObjectToExpenseEntity<\/a>"],[100,1,"<a href=\"Services\/UserService.php.html#16\">App\\Services\\UserService::__construct<\/a>"],[0,2,"<a href=\"Services\/UserService.php.html#18\">App\\Services\\UserService::loginUser<\/a>"],[100,3,"<a href=\"Services\/UserService.php.html#32\">App\\Services\\UserService::createUser<\/a>"],[85.71428571428571,3,"<a href=\"Services\/UserService.php.html#47\">App\\Services\\UserService::updateMonthlyIncome<\/a>"],[100,2,"<a href=\"Services\/UserService.php.html#64\">App\\Services\\UserService::updatePassword<\/a>"],[90,5,"<a href=\"Services\/UserService.php.html#73\">App\\Services\\UserService::getAllUser<\/a>"],[100,4,"<a href=\"Services\/UserService.php.html#95\">App\\Services\\UserService::getUserById<\/a>"],[100,3,"<a href=\"Services\/UserService.php.html#114\">App\\Services\\UserService::deleteUser<\/a>"],[100,2,"<a href=\"Services\/UserService.php.html#129\">App\\Services\\UserService::checkIfUserIsAdmin<\/a>"],[0,1,"<a href=\"View.php.html#11\">App\\View::__construct<\/a>"],[0,1,"<a href=\"View.php.html#16\">App\\View::make<\/a>"],[0,3,"<a href=\"View.php.html#21\">App\\View::render<\/a>"],[0,1,"<a href=\"View.php.html#47\">App\\View::__toString<\/a>"],[0,1,"<a href=\"View.php.html#52\">App\\View::__get<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
